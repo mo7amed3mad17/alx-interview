@@ -15,7 +15,9 @@ def island_perimeter(grid):
         return "More Than 100"
 
     # List of indices of land cells
-    land_indices = [(i, j) for i in range(rows) for j in range(cols) if grid[i][j] == 1]
+    land_indices = [
+        (i, j) for i in range(rows) for j in range(cols) if grid[i][j] == 1
+    ]
 
     for (i, j) in land_indices:
         # Check up
