@@ -2,6 +2,8 @@
 """
 island_perimeter file
 """
+
+
 def island_perimeter(grid):
     """ island_perimeter function"""
     rows = len(grid)
@@ -11,10 +13,10 @@ def island_perimeter(grid):
     # check if not more than 100
     if rows > 100 or cols > 100:
         return "More Than 100"
-    
+
     # List of indices of land cells
     land_indices = [(i, j) for i in range(rows) for j in range(cols) if grid[i][j] == 1]
-    
+
     for (i, j) in land_indices:
         # Check up
         if i == 0 or grid[i-1][j] == 0:
@@ -28,5 +30,5 @@ def island_perimeter(grid):
         # Check right
         if j == cols-1 or grid[i][j+1] == 0:
             perimeter += 1
-    
+
     return perimeter
