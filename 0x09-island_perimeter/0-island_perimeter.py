@@ -7,6 +7,10 @@ def island_perimeter(grid):
     rows = len(grid)
     cols = len(grid[0])
     perimeter = 0
+
+    # check if not more than 100
+    if rows > 100 or cols > 100:
+        return "More Than 100"
     
     # List of indices of land cells
     land_indices = [(i, j) for i in range(rows) for j in range(cols) if grid[i][j] == 1]
