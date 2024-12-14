@@ -1,4 +1,12 @@
+#!/usr/bin/python3
+"""
+Making chane file
+"""
+
+
 def makeChange(coins, total):
+    """ making change function
+    """
     if total <= 0:
         return 0
 
